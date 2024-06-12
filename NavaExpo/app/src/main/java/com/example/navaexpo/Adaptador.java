@@ -40,12 +40,12 @@ public class Adaptador extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = inflater.inflate(R.layout.activity_costum_list_view, null);
-        TextView TxtView = (TextView) convertView.findViewById(R.id.textView);
-        ImageView deportesImg= (ImageView)  convertView.findViewById(R.id.imagen1);
-        TxtView.setText(deportesList[position]);
-        deportesImg.setImageResource(deportesImagenes[position]);
-        return convertView;
+    public View getView(int posicion, View datos, ViewGroup parent) {
+        datos = inflater.inflate(R.layout.activity_costum_list_view, null);
+        TextView TxtView = (TextView) datos.findViewById(R.id.editText);
+        ImageView deportesImg= (ImageView)  datos.findViewById(R.id.imagen);
+        TxtView.setText(deportesList[posicion]);
+        deportesImg.setImageResource(deportesImagenes[posicion]);
+        return datos;
     }
 }

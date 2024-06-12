@@ -9,9 +9,19 @@
     tools:context=".MainActivity">
 
     <ListView
-        android:id="@+id/custumListView"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:id="@+id/listilla"
+        android:layout_width="407dp"
+        android:layout_height="650dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="añadir imagen"
+        app:layout_constraintBottom_toTopOf="@+id/listilla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

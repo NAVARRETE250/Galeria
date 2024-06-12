@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    String deportesList[] ={"futbol","basquet","rugby"};
+    String deportesList[] ={"rugby","basquet","futbol"};
     int deportesImagenes[]= {R.drawable.images, R.drawable.images2, R.drawable.images3};
 
     ListView listView;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
-        listView = (ListView) findViewById(R.id.custumListView);
+        listView = (ListView) findViewById(R.id.listilla);
         Adaptador adaptador = new Adaptador( getApplicationContext(),deportesList,deportesImagenes);
         listView.setAdapter(adaptador);
 
