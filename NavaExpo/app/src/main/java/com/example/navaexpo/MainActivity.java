@@ -18,15 +18,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
+
         setContentView(R.layout.activity_main);
-        listView = (ListView) findViewById(R.id.costumListView);
-        Adaptador adaptador = new adaptador(getApplicationContext(),deportesList,deportesImagenes);
+        listView = (ListView) findViewById(R.id.custumListView);
+        Adaptador adaptador = new Adaptador( getApplicationContext(),deportesList,deportesImagenes);
         listView.setAdapter(adaptador);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-    }
+
+            }
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Adaptador extends BaseAdapter {
@@ -41,9 +42,10 @@ public class Adaptador extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.activity_costum_list_view, null);
-        TextView TxtView = (TextView) convertView.findViewById(R.id.textText);
-        c.setText(deportesList[position]);
-        deportesImagenes.imagen1(deportesList[position]);
+        TextView TxtView = (TextView) convertView.findViewById(R.id.textView);
+        ImageView deportesImg= (ImageView)  convertView.findViewById(R.id.imagen1);
+        TxtView.setText(deportesList[position]);
+        deportesImg.setImageResource(deportesImagenes[position]);
         return convertView;
     }
 }
